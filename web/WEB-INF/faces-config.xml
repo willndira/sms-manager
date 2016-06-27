@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="1.2" 
+              xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+    
+    <!-- <application>
+        <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+    </application>
+    -->
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>template</from-outcome>
+            <to-view-id>/admin/template.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+ 
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>editSmsCredits</from-outcome>
+            <to-view-id>/admin/editSmsCredits.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+   
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>template</from-outcome>
+            <to-view-id>/admin/template.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>profile</from-outcome>
+            <to-view-id>/profile.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>admin</from-outcome>
+            <to-view-id>/admin/home.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>accounts</from-outcome>
+            <to-view-id>/admin/accounts.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>account</from-outcome>
+            <to-view-id>/admin/account.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>editAccount</from-outcome>
+            <to-view-id>/admin/editAccount.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>smsOutReports</from-outcome>
+            <to-view-id>/admin/smsOutReports.jsp</to-view-id>  
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>smsUtilisationReports</from-outcome>
+            <to-view-id>/admin/smsUtilisationReports.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/index.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <validator>
+        <validator-id>valUtil</validator-id>
+        <validator-class>util.ValUtil</validator-class>
+    </validator>
+    <validator>
+        <validator-id>emailVAlidator</validator-id>
+        <validator-class>util.EmailValidator</validator-class>
+    </validator>
+    
+    <validator>
+        <validator-id>smsValidate</validator-id>
+        <validator-class>util.SmsValidate</validator-class>
+    </validator>
+    
+    <managed-bean>
+        <managed-bean-name>indexBean</managed-bean-name>
+        <managed-bean-class>model.IndexBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>panelMenuBean</managed-bean-name>
+        <managed-bean-class>model.PanelMenuBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>reportController</managed-bean-name>
+        <managed-bean-class>controller.ReportController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>smsOutModel</managed-bean-name>
+        <managed-bean-class>model.SmsOutModel</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>smsOutUserBean</managed-bean-name>
+        <managed-bean-class>model.SmsOutUserBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>smsCredits</managed-bean-name>
+        <managed-bean-class>model.SMSCredits</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>sMSCreditsUserBean</managed-bean-name>
+        <managed-bean-class>model.SMSCreditsUserBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>userBean</managed-bean-name>
+        <managed-bean-class>model.UserBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>subAccounts</managed-bean-name>
+        <managed-bean-class>controller.SubAccountController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>allowedAlphanumerics</managed-bean-name>
+        <managed-bean-class>model.AllowedAlphanumerics</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+   
+    <managed-bean>
+        <managed-bean-name>userData</managed-bean-name>
+        <managed-bean-class>service.UserData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    
+    <!---->
+    
+    
+    <!---->
+  
+    
+
+   
+    
+</faces-config>
